@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startup Page</title>
+    <!-- fontawesome link through CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- main css -->
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="bg-gray-800 flex flex-col justify-center items-center overflow-hidden h-screen m-0" id="body">
+    <div class="absolute top-4 right-4">
+      <div class="flex justify-center items-center">
+        <div class="cursor-pointer bg-white py-2 px-4 rounded-s-xl shadow-md" id="day"><i class="fa-regular fa-sun"></i></div>
+        <div class="cursor-pointer bg-gray-900 text-white py-2 px-4 rounded-e-xl shadow-md keepSpinning" id="night">
+          <i class="fa-regular fa-moon"></i>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-4xl text-center pb-4 font-bold text-slate-200 uppercase wowpixels">Calculator App</h1>
+    <div class="min-w-[90%] md:min-w-[40%] lg:min-w-[30%] xl:min-w-[25%] text-center bg-gray-100 drop-shadow-2xl p-4 rounded-2xl">
+      <div class="flex justify-end items-center h-20 bg-gray-800 w-full text-white px-6 mb-4 rounded-2xl" id="shiftDay">
+        <div class="display text-5xl overflow-hidden" id="display"></div>
+        <span class="text-5xl blink" id="blinker">_</span>
+      </div>
+
+      <div class="grid grid-cols-4 gap-1 justify-center items-center">
+        <div class="text-2xl cursor-pointer mb-1">
+          <div class="keyClears" id="clear">AC</div>
+        </div>
+        <div class="col-span-3">
+          <div class="operators grid grid-cols-3 gap-1 justify-center items-center text-2xl cursor-pointer mb-1">
+            <div class="keyOperators">+</div>
+            <div class="keyOperators">-</div>
+            <div class="keyOperators">×</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-1">
+        <div class="col-span-3">
+          <div class="numbers grid grid-cols-3 gap-1 justify-center items-center text-2xl text-slate-500 cursor-pointer">
+            <div class="keyNumbers">9</div>
+            <div class="keyNumbers">8</div>
+            <div class="keyNumbers">7</div>
+          </div>
+        </div>
+        <div class="operators text-2xl cursor-pointer mb-1">
+          <div class="keyOperators">÷</div>
+        </div>
+        <div class="col-span-3">
+          <div class="numbers grid grid-cols-3 gap-1 justify-center items-center text-2xl text-slate-500 cursor-pointer">
+            <div class="keyNumbers">6</div>
+            <div class="keyNumbers">5</div>
+            <div class="keyNumbers">4</div>
+            <div class="keyNumbers">3</div>
+            <div class="keyNumbers">2</div>
+            <div class="keyNumbers">1</div>
+            <div class="keyNumbers col-span-2">0</div>
+            <div class="keyNumbers">.</div>
+          </div>
+        </div>
+
+        <div class="keyEquals" id="equals">=</div>
+      </div>
+    </div>
+    <div id="quote" class="pt-8 text-center px-4 text-xs text-slate-500 tracking-widest uppercase">
+      Created with vanilla Javascript & Tailwind CSS
+    </div>
+    <div id="copyright" class="wowpixels text-center px-4 text-slate-500">
+      <a class="transition ease-in-out duration-500 hover:text-pink-400" href="https://wowpixels.dev" target="_blank">wowpixels.dev</a>
+    </div>
+    <!-- main js -->
+    <script src="script.js"></script>
+  </body>
+</html>

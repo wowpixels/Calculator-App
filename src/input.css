@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.keyNumbers {
+  @apply py-5 bg-slate-200 rounded-full transition ease-in-out duration-500 hover:bg-slate-700 hover:text-slate-100;
+}
+
+.keyClears {
+  @apply py-5 bg-yellow-400 rounded-full transition ease-in-out duration-500 hover:bg-yellow-300;
+}
+
+.day {
+  @apply bg-gray-100;
+}
+
+.dayColor {
+  @apply text-gray-300;
+}
+
+.opacityDay {
+  @apply opacity-60;
+}
+
+.dayScreen {
+  @apply bg-gray-300;
+}
+
+#day:hover > i {
+  @apply animate-spin;
+}
+
+.keepSpinning > i {
+  @apply animate-spin;
+}
+
+#night:hover > i {
+  @apply animate-spin;
+}
+
+.keyOperators {
+  @apply py-5 bg-orange-500 rounded-full transition ease-in-out duration-500 hover:bg-orange-400;
+}
+
+.keyEquals {
+  @apply grid justify-center items-center bg-green-500 transition ease-in-out duration-500 text-2xl cursor-pointer rounded-full hover:bg-green-400;
+}
+
+.wowpixels {
+  font-family: "Chewy", cursive;
+}
+
+.blink {
+  animation: blinker 0.2s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
